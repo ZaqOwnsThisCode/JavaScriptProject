@@ -1,0 +1,410 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*End Broswer CSS reset*/
+/*FOOTER BEGINS
+Footer was from previous project, I just like it and figuring 
+out how to do the icons took too much time to only use it once*/
+.footer {
+  background-color: rgb(32, 33, 34);
+  padding: 30px 0 10px 0;
+  font-size: 16px;
+  line-height: 24px;
+  overflow: auto;
+  color: lightslategray;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footer h6 {
+  color: azure;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  letter-spacing: 1.5px;
+}
+
+.footerlinks {
+  padding-left: 0px;
+}
+
+.footerlinks a {
+  color: #c4718a;
+  text-decoration: none;
+}
+
+.footerlinks a:active,
+.footerlinks a:focus,
+.footerlinks a:hover {
+  color: #6360e4;
+  text-decoration: none;
+}
+
+.footerlinks.inline li {
+  display: inline-block;
+}
+
+.footer .icon-div {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer .icons {
+  text-align: center;
+  display: flex;
+}
+
+.footer .icons a {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin-left: 6px;
+  margin-right: 0;
+  border-radius: 100%;
+  background-color: #11131a;
+}
+
+.icons {
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.icons li {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.icons a {
+  color: #e5e9ec;
+  font-size: 19px;
+  display: inline-block;
+  line-height: 44px;
+  width: 64px;
+  height: 64px;
+  text-align: center;
+  margin-right: 8px;
+  border-radius: 100%;
+}
+
+.icons a.twitter:hover {
+  background-color: #00aced;
+  color: white;
+}
+
+.icons a.youtube:hover {
+  background-color: #bb0000;
+  color: white;
+}
+
+.icons a.instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  color: white;
+}
+
+.icons a.twitch:hover {
+  background-color: #9146FF;
+  color: white;
+}
+
+.discord {
+  color: #6671ee;
+  background-color: inherit;
+}
+
+.discord:hover {
+  color: #4955d1;
+}
+
+@media screen and (max-width: 730px) {
+  .footer {
+    position: relative;
+    padding-bottom: 30px;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .icons {
+    grid-area: icons;
+    flex-direction: row;
+  }
+  hr {
+    grid-area: hr;
+    width: 100%;
+  }
+  .footer .icon-div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "hr" "icons";
+  }
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+#buttonHolder button,
+#newGame button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 5%;
+  font-size: x-large;
+  cursor: pointer;
+}
+
+#buttonHolder button {
+  background-color: #d7d192;
+  color: black;
+}
+
+#newGame button:hover {
+  background-color: #d7d192;
+  color: black;
+}
+
+#buttonHolder button:hover {
+  background-color: black;
+  color: #d7d192;
+}
+
+#newGame button {
+  background-color: black;
+  color: #d7d192;
+}
+
+#player1,
+#player2 {
+  text-align: center;
+  max-width: 33%;
+  height: auto;
+  background: radial-gradient(circle at 30% 107%, #655b08 0%, #d7d192 5%, #df1a08 45%, #d747a9 60%, #33952b 80%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 50px;
+}
+
+#p1Total,
+#p2Total {
+  font-size: x-large;
+  color: #aba46a;
+  background-color: black;
+  border-radius: 20px;
+  padding: 5px;
+  border: 1px solid white;
+}
+
+#p1Score p,
+#p2Score p {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.images {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(6, 6, 6);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 15px;
+}
+
+.dice {
+  width: 25%;
+  height: auto;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  border-radius: 40px;
+}
+
+/* Rotate */
+@-webkit-keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+#player1 {
+  border-right: 1px solid wheat;
+}
+
+#player2 {
+  border-left: 1px solid wheat;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 17px;
+  background-color: rgb(73, 68, 68);
+  color: rgb(235, 235, 235);
+  font-family: sans-serif;
+  background: url("../images/background.png") center center fixed;
+  background-size: cover;
+}
+
+header {
+  border-bottom: 1px rgb(232, 228, 228) solid;
+}
+
+a:link {
+  text-decoration: none;
+  color: rgb(238, 231, 231);
+}
+
+a:visited {
+  color: rgb(238, 231, 231);
+}
+
+.nav {
+  color: rgb(238, 231, 231);
+  display: flex;
+  justify-content: center;
+  background-color: rgb(32, 33, 34);
+}
+
+.nav-item {
+  padding: 10px 15px 10px 15px;
+  cursor: pointer;
+  font-size: x-large;
+}
+
+.nav-item:hover {
+  background-color: rgb(20, 2, 2);
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+}
+
+.nav-item:active,
+a:active {
+  background-color: rgb(255, 255, 255);
+  color: rgb(20, 2, 2);
+}
+
+h1 {
+  font-size: x-large;
+  background: radial-gradient(circle at 30% 107%, #c3be88 0%, #d7d192 5%, #fd5949 45%, #a20f73 60%, #132d7d 90%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*medium*/
+@media screen and (max-width: 1000px) and (min-width: 730px) {
+  .wrapper {
+    flex-direction: row;
+    margin: 10px;
+  }
+}
+/*smallest*/
+@media screen and (max-width: 730px) {
+  .wrapper {
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0px;
+    min-height: 100%;
+  }
+  #newGame {
+    margin-top: 43%;
+  }
+  #player1,
+#player2 {
+    max-width: none;
+  }
+  #player1 {
+    border-right: 0;
+    border-top: 1px solid wheat;
+  }
+  #player2 {
+    border-left: 0;
+    border-top: 1px solid wheat;
+  }
+  body {
+    font-size: 15px;
+  }
+  .nav {
+    flex-direction: column;
+    line-height: 12px;
+    align-items: center;
+  }
+  .nav-item:hover {
+    border-radius: 1pc;
+  }
+}/*# sourceMappingURL=style.css.map */

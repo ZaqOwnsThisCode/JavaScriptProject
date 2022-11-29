@@ -1,0 +1,146 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+/*FOOTER BEGINS
+Footer was from previous project, I just like it and figuring 
+out how to do the icons took too much time to only use it once*/
+.footer {
+  background-color: rgb(32, 33, 34);
+  padding: 30px 0 10px 0;
+  font-size: 16px;
+  line-height: 24px;
+  overflow: auto;
+  color: lightslategray;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footer h6 {
+  color: azure;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  letter-spacing: 1.5px;
+}
+
+.footerlinks {
+  padding-left: 0px;
+}
+
+.footerlinks a {
+  color: #c4718a;
+  text-decoration: none;
+}
+
+.footerlinks a:active,
+.footerlinks a:focus,
+.footerlinks a:hover {
+  color: #6360e4;
+  text-decoration: none;
+}
+
+.footerlinks.inline li {
+  display: inline-block;
+}
+
+.footer .icon-div {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer .icons {
+  text-align: center;
+  display: flex;
+}
+
+.footer .icons a {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin-left: 6px;
+  margin-right: 0;
+  border-radius: 100%;
+  background-color: #11131a;
+}
+
+.icons {
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.icons li {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.icons a {
+  color: #e5e9ec;
+  font-size: 19px;
+  display: inline-block;
+  line-height: 44px;
+  width: 64px;
+  height: 64px;
+  text-align: center;
+  margin-right: 8px;
+  border-radius: 100%;
+}
+
+.icons a.twitter:hover {
+  background-color: #00aced;
+  color: white;
+}
+
+.icons a.youtube:hover {
+  background-color: #bb0000;
+  color: white;
+}
+
+.icons a.instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  color: white;
+}
+
+.icons a.twitch:hover {
+  background-color: #9146FF;
+  color: white;
+}
+
+.discord {
+  color: #6671ee;
+  background-color: inherit;
+}
+
+.discord:hover {
+  color: #4955d1;
+}
+
+@media screen and (max-width: 730px) {
+  .footer {
+    position: relative;
+    padding-bottom: 30px;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .icons {
+    grid-area: icons;
+    flex-direction: row;
+  }
+  hr {
+    grid-area: hr;
+    width: 100%;
+  }
+  .footer .icon-div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "hr" "icons";
+  }
+}/*# sourceMappingURL=footer.css.map */
